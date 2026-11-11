@@ -1,0 +1,7 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run --token
+      [CENSORED :P]
+    restart: unless-stopped
+networks: {}
