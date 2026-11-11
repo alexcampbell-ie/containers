@@ -1,0 +1,13 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    user: 1000:1000
+    environment:
+      ND_MUSICFOLDER: /music/admin
+    ports:
+      - 4533:4533
+    restart: unless-stopped
+    volumes:
+      - /mnt/appdata/navidrome:/data
+      - /mnt/core/music:/music
+networks: {}
