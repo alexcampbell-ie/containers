@@ -1,0 +1,12 @@
+services:
+  komga:
+    image: gotson/komga
+    container_name: komga
+    volumes:
+      - /mnt/appdata/komga:/config
+      - /mnt/core/manga:/data
+    ports:
+      - 25600:25600
+    user: 1000:1000
+    restart: unless-stopped
+networks: {}
