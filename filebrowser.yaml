@@ -1,0 +1,11 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser
+    container_name: filebrowser
+    ports:
+      - 8090:80
+    volumes:
+      - /mnt/core:/srv
+      - /mnt/appdata/filebrowser/database:/database
+      - /mnt/appdata/filebrowser/config:/config
+    restart: unless-stopped
